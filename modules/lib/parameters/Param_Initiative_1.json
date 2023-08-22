@@ -1,0 +1,21 @@
+{
+      "resourceGroupPattern": {
+        "type": "String",
+        "metadata": {
+          "displayName": "ResourceGroupPattern",
+          "description": "The pattern that follows the naming of the resource groups in the subscription."
+        }
+      },
+      "Effect": {
+        "type": "string",
+        "metadata": {
+          "displayName": "Effect",
+          "description": "El modo de aplicación de las políticas."
+        },
+        "allowedValues": [
+          "Audit",
+          "Deny",
+          "Disabled"
+        ]
+      }
+}

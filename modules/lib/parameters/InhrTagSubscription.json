@@ -1,0 +1,9 @@
+{
+    "tagNames": {
+        "type": "Array",
+        "metadata": {
+        "displayName": "Tag Names",
+    "description": "List of tag names, such as ['ctx-businessunit', 'ctx-environment']"
+        }
+    }
+}

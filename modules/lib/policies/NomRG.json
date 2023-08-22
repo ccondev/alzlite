@@ -1,0 +1,25 @@
+{
+    "if": {
+        "allOf": [
+          {
+            "field": "type",
+            "equals": "Microsoft.Resources/subscriptions/resourceGroups"
+          },
+          {
+            "field": "name",
+            "notLike": "MC_*"
+          },
+          {
+            "field": "name",
+            "notContains": "aks"
+          },
+          {
+            "field": "name",
+            "notLike": "[parameters('resourceGroupPattern')]"
+          }
+        ]
+      },
+      "then": {
+        "effect": "[parameters('effect')]"
+      }
+}

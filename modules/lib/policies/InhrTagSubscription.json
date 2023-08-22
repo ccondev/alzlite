@@ -1,0 +1,56 @@
+{
+  "if": {
+      "allOf": [
+          {
+              "not": {
+                  "anyOf": [
+                      {
+                          "allOf": [
+                              {
+                                  "field": "[concat('tags[', parameters('tagNames')[0], ']')]",
+                                  "equals": "[subscription().tags[parameters('tagNames')[0]]]"
+                              },
+                              {
+                                  "value": "[subscription().tags[parameters('tagNames')[0]]]",
+                                  "notEquals": ""
+                              }
+                          ]
+                      },
+                      {
+                          "allOf": [
+                              {
+                                  "field": "[concat('tags[', parameters('tagNames')[1], ']')]",
+                                  "equals": "[subscription().tags[parameters('tagNames')[1]]]"
+                              },
+                              {
+                                  "value": "[subscription().tags[parameters('tagNames')[1]]]",
+                                  "notEquals": ""
+                              }
+                          ]
+                      }
+                  ]
+              }
+          }
+      ]
+  },
+  "then": {
+      "effect": "modify",
+      "details": {
+          "roleDefinitionIds": [
+              "/providers/microsoft.authorization/roleDefinitions/b24988ac-6180-42a0-ab88-20f7382dd24c"
+          ],
+          "operations": [
+              {
+                  "operation": "addOrReplace",
+                  "field": "[concat('tags[', parameters('tagNames')[0], ']')]",
+                  "value": "[subscription().tags[parameters('tagNames')[0]]]"
+              },
+              {
+                  "operation": "addOrReplace",
+                  "field": "[concat('tags[', parameters('tagNames')[1], ']')]",
+                  "value": "[subscription().tags[parameters('tagNames')[1]]]"
+              }
+          ]
+      }
+  }
+}

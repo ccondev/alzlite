@@ -1,0 +1,22 @@
+{
+    "effect": {
+        "type": "String",
+        "metadata": {
+          "displayName": "Effect",
+          "description": "Enable or disable policy enforcement."
+        },
+        "allowedValues": [
+          "Audit",
+          "Deny",
+          "Disabled"
+        ],
+        "defaultValue": "Audit"
+      },
+      "resourceGroupPattern": {
+        "type": "String",
+        "metadata": {
+          "displayName": "ResourceGroupPattern",
+          "description": "The pattern that follows the naming of the resource groups in the subscription."
+        }
+      }
+}
