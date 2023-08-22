@@ -13,6 +13,7 @@ Root Directory:
      │   ├── monitoring
      │   ├── networking
      │   ├── policies
+     │   ├── storage
      │   └── resourcegroups
      ├── main.tf
      ├── provider.tf
@@ -21,7 +22,6 @@ Root Directory:
      └── variables.tf
 ```
 
- - `environment`: This directory contains the environment-specific configuration files (for example: dev, prod).
  - `modules`: This directory contains the reusable Terraform modules for the different infrastructure components, such as networking, monitoring, policies, etc.
  - `main.tf`: This file contains the main Terraform code to be deployed.
  - `provider.tf`: This file contains the provider configuration for Terraform.
